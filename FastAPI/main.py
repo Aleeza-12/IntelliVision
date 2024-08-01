@@ -62,3 +62,4 @@ def login(user: LoginUser):
     except Exception as e:
         logger.error(f"Login failed: {e}")
         raise HTTPException(status_code=500, detail="An error occurred during login")
+
