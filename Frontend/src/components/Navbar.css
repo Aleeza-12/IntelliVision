@@ -1,10 +1,11 @@
+/* Navbar.css */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px;
   background-color: #333;
-  color: white;
+  color: #fff;
 }
 
 .navbar-left {
@@ -13,13 +14,13 @@
 }
 
 .logo {
-  height: 40px;
+  width: 50px;
+  height: 50px;
   margin-right: 10px;
 }
 
 .navbar-brand {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 1.5em;
 }
 
 .navbar-right {
@@ -28,27 +29,68 @@
 }
 
 .nav-button {
-  margin-right: 15px;
-  padding: 10px 20px;
-  border: none;
+  margin-right: 10px;
+  padding: 5px 10px;
   background-color: #007bff;
   color: white;
-  cursor: pointer;
+  border: none;
   border-radius: 5px;
-}
-
-.nav-button:hover {
-  background-color: #0056b3;
+  cursor: pointer;
 }
 
 .profile {
   display: flex;
   align-items: center;
+  cursor: pointer;
+  position: relative;
 }
 
 .icon {
-  height: 30px;
   width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.dropdown-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.dropdown-icon {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   margin-right: 10px;
+}
+
+.dropdown-name {
+  font-weight: bold;
+}
+
+.dropdown-email {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
 }
