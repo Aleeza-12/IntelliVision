@@ -11,6 +11,8 @@ import './App.css';
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
   const [showSignup, setShowSignup] = useState(false);
+  const [detectedObjects, setDetectedObjects] = useState([]);
+  const [imagePreview, setImagePreview] = useState(null);
 
   const handleLoginClick = () => {
     setShowLogin(true);
@@ -31,7 +33,7 @@ const App = () => {
       <div className="main-content">
         <Upload />
         <ObjectSegmentation />
-        <ObjectDetection />
+        <ObjectDetection detectedObjects={detectedObjects} imagePreview={imagePreview} />
       </div>
       <Footer />
       {showLogin && <Login onClose={handleClose} />}
