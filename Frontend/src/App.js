@@ -13,6 +13,8 @@ const App = () => {
   const [showSignup, setShowSignup] = useState(false);
   const [detectedObjects, setDetectedObjects] = useState([]);
   const [imagePreview, setImagePreview] = useState(null);
+  const [segmentationImage, setSegmentationImage] = useState(null);
+  const [segmentationResults, setSegmentationResults] = useState([]);
 
   const handleLoginClick = () => {
     setShowLogin(true);
@@ -27,12 +29,25 @@ const App = () => {
     setShowSignup(false);
   };
 
+  const handleDetection = (objects, image) => {
+    setDetectedObjects(objects);
+    setImagePreview(image);
+  };
+
+  const handleSegmentation = (results, image) => {
+    setSegmentationResults(results);
+    setSegmentationImage(image);
+  };
+
   return (
     <div className="app">
       <Navbar onLoginClick={handleLoginClick} onSignupClick={handleSignupClick} />
       <div className="main-content">
-        <Upload />
-        <ObjectSegmentation />
+        <Upload onDetection={handleDetection} onSegmentation={handleSegmentation} />
+        <ObjectSegmentation 
+          segmentationImage={segmentationImage} 
+          segmentationResults={segmentationResults} 
+        />
         <ObjectDetection detectedObjects={detectedObjects} imagePreview={imagePreview} />
       </div>
       <Footer />

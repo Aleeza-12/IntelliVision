@@ -1,9 +1,11 @@
+/* Upload.css */
+
 .upload-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Full viewport height to center vertically */
+  min-height: 100vh; /* Full viewport height to center vertically */
   background-color: #f0f0f0; /* Optional: background color for the whole container */
 }
 
@@ -13,7 +15,6 @@
   border-radius: 10px;
   background-color: #faf8f8;
   width: 400px;  /* Set a fixed width */
-  height: 350px; /* Increased height for better spacing */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,7 +40,6 @@
 
 .upload-actions {
   display: flex;
-  justify-content: space-between;
   justify-content: center;
   width: 100%;
   gap: 10px; /* Space between buttons */
@@ -56,4 +56,16 @@
 
 .file-input {
   display: none;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px 0;
 }

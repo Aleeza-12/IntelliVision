@@ -1,6 +1,6 @@
 .object-segmentation-container {
   padding: 20px;
-  margin: 20px;
+  margin: 80px;
   text-align: left;
   background-color: #f9f9f9;
   border: 2px solid #e0e0e0;
@@ -11,9 +11,18 @@
   padding: 20px;
   border: 1px solid #ccc;
   background-color: #fff;
+  margin-top: 20px;
 }
 
 .object-segmentation-container h2 {
   margin-bottom: 20px;
   font-size: 28px;
+}
+
+.segmentation-image {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
 }
